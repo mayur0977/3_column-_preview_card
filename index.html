@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | 3-column preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(0, 0%, 95%);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin: 100px auto;
+      }
+      .car-container {
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: repeat(3, 15rem);
+        border-radius: 0.5rem;
+      }
+      .car {
+        padding: 2rem;
+        color: hsl(0, 0%, 95%);
+      }
+
+      .car-img {
+        margin-bottom: 2rem;
+      }
+      .car-type-title {
+        font-family: "Big Shoulders Display", sans-serif;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      .car-description {
+        font-family: "Lexend Deca", sans-serif;
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 0.8rem;
+        margin-bottom: 4rem;
+        line-height: 1.5;
+      }
+      .btn-learn-more {
+        border: none;
+        background-color: hsl(0, 0%, 95%);
+        border: 1px solid transparent;
+        padding: 0.8rem 1.5rem;
+        border-radius: 100px;
+        font-family: "Lexend Deca", sans-serif;
+        color: transparent;
+        font-size: 0.8rem;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+      .sedan {
+        background-color: hsl(31, 77%, 52%);
+      }
+      .sedan .btn-learn-more {
+        color: hsl(31, 77%, 52%);
+      }
+      .suv {
+        background-color: hsl(184, 100%, 22%);
+      }
+      .suv .btn-learn-more {
+        color: hsl(184, 100%, 22%);
+      }
+      .cruise {
+        background-color: hsl(179, 100%, 13%);
+      }
+      .cruise .btn-learn-more {
+        color: hsl(179, 100%, 13%);
+      }
+
+      .btn-learn-more:hover {
+        cursor: pointer;
+        border: 1px solid hsla(0, 0%, 100%, 0.75);
+        background: transparent;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          margin: 50px auto;
+        }
+        .car-container {
+          grid-template-columns: 15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="car-container">
+        <div class="car sedan">
+          <img class="car-img" src="images/icon-sedans.svg" alt="sedan" />
+          <h2 class="car-type-title">Sedans</h2>
+          <p class="car-description">
+            Choose a sedan for its affordability and excellent fuel economy.
+            Ideal for cruising in the city or on your next road trip.
+          </p>
+          <button class="btn-learn-more">Learn more</button>
+        </div>
+
+        <div class="car suv">
+          <img class="car-img" src="images/icon-suvs.svg" alt="suv" />
+          <h2 class="car-type-title">SUVs</h2>
+          <p class="car-description">
+            Take an SUV for its spacious interior, power, and versatility.
+            Perfect for your next family vacation and off-road adventures.
+          </p>
+          <button class="btn-learn-more">Learn more</button>
+        </div>
+        <div class="car cruise">
+          <img class="car-img" src="images/icon-luxury.svg" alt="cruise" />
+          <h2 class="car-type-title">Luxury</h2>
+          <p class="car-description">
+            Cruise in the best car brands without the bloated prices. Enjoy the
+            enhanced comfort of a luxury rental and arrive in style.
+          </p>
+          <button class="btn-learn-more">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
