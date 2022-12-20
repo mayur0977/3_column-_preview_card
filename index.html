@@ -28,15 +28,21 @@
         margin: 0;
         box-sizing: border-box;
       }
+      html,
       body {
         background-color: hsl(0, 0%, 95%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
       }
       .container {
         display: flex;
-        justify-content: center;
-        margin: 100px auto;
+        overflow-y: auto;
+        padding: 20px;
+        height: 100%;
       }
       .car-container {
+        margin: auto;
         display: grid;
         overflow: hidden;
         grid-template-columns: repeat(3, 15rem);
@@ -102,9 +108,6 @@
       }
 
       @media (max-width: 480px) {
-        .container {
-          margin: 50px auto;
-        }
         .car-container {
           grid-template-columns: 15rem;
         }
